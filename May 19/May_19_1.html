@@ -9,7 +9,7 @@
 	<form>
 		<div>
 			<label for="name">Name:</label>
-			<input id="name" type="text" name="name">	
+			<input id="name" type="text" name="name" required minlength="5" maxlength="10">
 		</div>
 		<br>
 		<div>
@@ -45,6 +45,12 @@
 			<label for="male">Male</label>
 			<input type="radio" id="female" name="gender">
 			<label for="female">Female</label>
+		</div>
+
+		<br>
+		<div>
+			<label for="quantity">Quantity: </label>
+			<input type="number" min="5" max="10" step="0.05" name="quantity" id="quantity">
 		</div>
 
 		<select name="myselect" multiple>
