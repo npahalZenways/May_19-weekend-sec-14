@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- extrenal css -->
+	<link rel="stylesheet" type="text/css" href="./style.css">
+
+	<style type="text/css">
+		/*internal css*/
+		*{
+			/*select all elements*/
+		}
+
+		/*tag name selector*/
+		p{
+			color: yellow;
+		}	
+
+		/*class name selector*/
+		div.my-para.special-div{
+			color: blue;
+		}
+
+		/*id selector*/
+		#id-name{
+
+		}
+
+		/*selects all p elements which lie inside div*/
+		div p{
+			color: cyan	
+		}
+
+		/*selects all p elements which are immediate child of div*/
+		div > p{
+			color: black;
+		}
+
+		div > section > p{
+			color: orange
+		}
+
+		/*selects all p elements which lie immediately after div*/
+		div + p, p + section p{
+			font-size: 24px;
+		}
+
+		/*attribute selectors*/
+		[href]{
+			color: green
+		}
+
+		[href="#"]{
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	<!-- Inline css -->
+	<!-- <p style="color: red">
+		This is a para
+	</p> -->
+	<p href>
+		This is a para
+	</p>
+	<p class="my-para">
+		This is a para
+	</p>
+	<p class="my-para">
+		This is a para
+	</p>
+	<div class="my-para">
+		This is a div
+	</div>
+	<div class="my-para special-div">
+		This is a div
+	</div>
+	<div class="special-div">
+		This is a div
+	</div>
+	
+	<div>
+		<p>
+			This is para inside div
+		</p>
+	</div>
+	
+	<p>
+		Immediatey after div
+	</p>
+
+	<div>
+		<section>
+			<p>
+				This is para inside section which is inside div
+			</p>
+			<section>
+				<p>
+					Deep para
+				</p>
+			</section>
+		</section>
+	</div>
+
+	<a>Link without href</a>
+
+	<a href="">Blank link</a>
+
+	<a href="#">Link with gref as #</a>
+
+	<a href="#1">Link with gref as #1</a>
+
+</body>
+</html>

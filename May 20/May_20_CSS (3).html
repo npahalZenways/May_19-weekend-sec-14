@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		/*div p{
+			display: inline;
+			background-color: red;
+			padding: 10px;
+		}
+		div{
+
+		}*/
+		/*p:first-child{
+			visibility: hidden;
+			display: none
+		}*/
+		div{
+			/*default:
+				flex-direction: row;
+				primary-axis: x-axis;
+				justify-content works primary
+				secondary-axis: y-axis
+				align-items works on secondary axis;
+			*/
+			display: flex;
+			height: 200px;
+			background-color: green;
+			align-items: center;
+			justify-content: space-between;
+			/*flex-direction: column;*/
+		}
+		div p{
+			background-color: red;
+			height: 100px;
+			width: 100px;
+			display: flex;
+			align-items: center
+		}
+	</style>
+</head>
+<body>
+	
+	<div>
+		<p>
+			<span>Span 1</span>
+			<span>Span 2</span>
+		</p>
+		<p>
+			<span>Span 1</span>
+			<span>Span 2</span>
+		</p>
+		<p>
+			<span>Span 1</span>
+			<span>Span 2</span>
+		</p>
+	</div>
+</body>
+</html>
