@@ -1,0 +1,39 @@
+<!-- in-built-directives -->
+
+<!-- ngIf -->
+
+<div *ngIf="isTrue; then thenBlock; else elseBlock">
+  this is a div
+</div>
+<ng-template #thenBlock>
+  <p>
+    This is then block
+  </p>
+</ng-template>
+<ng-template #elseBlock>
+  <p>
+    This is else block
+  </p>
+</ng-template>
+
+<!-- ngSwitch -->
+
+<div [ngSwitch]="myName">
+  <p *ngSwitchCase="'Nitin'">Nitin</p>
+  <p *ngSwitchCase="'Amit'">Amit</p>
+  <p *ngSwitchCase="'Shivam'">Shivam</p>
+  <p *ngSwitchDefault>Not matched</p>
+</div>
+
+<!-- ngForOf -->
+<!-- 
+<p>{{ myArr[0] }}</p>
+<p>{{ myArr[1] }}</p>
+<p>{{ myArr[2] }}</p>
+<p>{{ myArr[3] }}</p> -->
+
+<!-- first, last, even, odd -->
+
+<p *ngFor="let iteratedElement of myArr; let i = index; let f = first">
+  <span *ngIf="f"> {{i+1}}.{{ iteratedElement }} </span>
+</p>
