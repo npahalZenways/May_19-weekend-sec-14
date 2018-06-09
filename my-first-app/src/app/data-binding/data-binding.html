@@ -1,0 +1,42 @@
+<!-- template reference variable | local template variable -->
+<p #para>
+    Variabble
+</p>
+<p #para2>
+    Variabble
+</p>
+
+<!-- one-way data-binding -->
+<!-- interpolation component ==> view -->
+<p ngNonBindable>
+    name of the component: {{title}}
+</p>
+
+<!-- property binding [] component ==> view -->
+<p [class]="className">
+    Class property binded
+</p>
+
+<!-- class binding [class.classname]="condition" -->
+<p [class.active123]="!isTrue">
+    This is classs binding
+</p>
+<!-- event binding () view ==> component -->
+<button (click)="isTrue = !isTrue">Click</button>
+
+<!-- two-way data-binding -->
+<!-- it works anywhere where an element have a property x and event xChange [(x)]-->
+
+<!-- <input type="text" [(ngModel)]="title" (ngModelChange)=""> -->
+
+<div style="border: 1px solid black">
+    <input type="text" [(ngModel)]="myemployee.name">
+    <input type="text" [(ngModel)]="myemployee.id">
+    <button (click)="print(myemployee)">Print</button>
+</div>
+
+<!-- ngClass -->
+
+<p [ngClass]="{className:isTrue, 'not-active': !isTrue}">
+    Ng Class directive
+</p>

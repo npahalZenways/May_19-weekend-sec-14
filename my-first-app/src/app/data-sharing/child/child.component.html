@@ -1,0 +1,11 @@
+<p>
+  child works!
+</p>
+
+<p>
+  received input is {{name}}
+</p>
+
+<button (click)="nameChange.emit(name)">Send output</button>
+
+<app-child2 [inputValue]="name"></app-child2>
