@@ -1,10 +1,11 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css'],
-  outputs: ['myoutput']
+  outputs: ['myoutput'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ChildComponent implements OnInit {
 
