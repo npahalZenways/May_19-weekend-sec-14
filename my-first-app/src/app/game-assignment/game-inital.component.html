@@ -1,0 +1,9 @@
+<div class="row" *ngIf="!selectedGame; else gameDetail">
+  <div class="col-md-4" *ngFor="let game of games" (click)="selectedGame = game">
+    <app-game-view [gameName]="game.Game" [imageUrl]="game.thumburl"></app-game-view>
+  </div>
+</div>
+
+<ng-template #gameDetail>
+  <app-game-detail [game]="selectedGame" (back)="selectedGame = undefined"></app-game-detail>
+</ng-template>

@@ -1,7 +1,30 @@
 <!-- <app-in-built-directives></app-in-built-directives> -->
 <!-- <data-binding></data-binding> -->
 <!-- <app-parent></app-parent> -->
-<app-services>
+<!-- <app-services>
     <app-directives></app-directives>
-    <!-- <p>para as a content</p> -->
-</app-services>
+    <p>para as a content</p>
+</app-services> -->
+<!-- 
+<app-life-cycle-hooks>
+    <app-services></app-services>
+</app-life-cycle-hooks> -->
+
+<!-- <div class="row" *ngIf="!selectedGame; else gameDetails">
+    <div class="col-md-4" *ngFor="let game of games" (click)="selectedGame = game">
+        <p>{{game.Game}}</p>
+        <img [src]="game.thumburl" width="100px">
+    </div>
+</div>
+
+<ng-template #gameDetails>
+    <p>Selected game: {{selectedGame.Game}}</p>
+    <img [src]="selectedGame.thumburl" width="500px">
+    <button class="float-right" (click)="selectedGame = undefined">Back</button>
+    <h1>Players: </h1>
+    <p *ngFor="let player of selectedGame.players">{{player.name}}</p>
+</ng-template> -->
+
+<!-- <app-template-driven-forms></app-template-driven-forms> -->
+
+<app-reactive-forms></app-reactive-forms>

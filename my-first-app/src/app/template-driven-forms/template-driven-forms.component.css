@@ -1,0 +1,3 @@
+.ng-touched[required]{
+    border: 1px solid red;
+}

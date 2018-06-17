@@ -1,0 +1,6 @@
+<p class="text-center">Selected Game: {{game.Game}}</p>
+<img [src]="game.thumburl" width="500px">
+<button class="float-right" (click)="back.emit()">Back</button>
+
+<h1>Players:</h1>
+<p *ngFor="let player of game.players">{{player.name}}</p>

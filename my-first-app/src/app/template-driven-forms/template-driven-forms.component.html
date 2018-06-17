@@ -1,0 +1,22 @@
+<!-- template driven forms -->
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <form #myForm="ngForm" (ngSubmit)="myForm.valid && onSubmit()">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="name" ngModel name="name" #myname="ngModel" required>
+        <div *ngIf="myname.errors">
+          <small *ngIf="myname.errors.required && myname.touched">Name is required</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" ngModel placeholder="email" #email="ngModel" name="email">
+      </div>
+      
+      <div class="form-group">
+        <button class="btn btn-success" (click)="myForm.form.control.markAsTouched()">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+    

@@ -1,14 +1,13 @@
-import { Component } from "@angular/core";
-import { MyService } from "./services/my-first-service";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  // providers: [MyService]
+  selector: 'app-game-inital',
+  templateUrl: './game-inital.component.html',
+  styleUrls: ['./game-inital.component.css']
 })
-export class AppComponent {
-  title = 'app';
+export class GameInitalComponent implements OnInit {
+
+  constructor() { }
   selectedGame;
 
   games = [{
@@ -65,4 +64,8 @@ export class AppComponent {
       }
     ]
   }]
+
+  ngOnInit() {
+  }
+
 }
