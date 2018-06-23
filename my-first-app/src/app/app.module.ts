@@ -18,6 +18,8 @@ import { GameViewComponent } from './game-assignment/game-view/game-view.compone
 import { GameDetailComponent } from './game-assignment/game-detail/game-detail.component';
 import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { CustomPipe } from './pipes/custom.pipe';
+import { PipeComponent } from './pipes/pipe/pipe.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     GameDetailComponent,
     GameInitalComponent,
     TemplateDrivenFormsComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    CustomPipe,
+    PipeComponent
     // remaining
   ],
   imports: [

@@ -1,0 +1,63 @@
+<!-- uppercase pipe -->
+
+<p>
+    My string: {{myString}}
+</p>
+
+<p>
+    My string with uppercase pipe: {{myString | uppercase}}
+</p>
+
+<!-- date pipe -->
+
+<p>
+    Today's date: {{todayDate}}
+</p>
+
+<p>
+    Today's date with date pipe: {{todayDate | date | lowercase}}
+</p>
+
+<p>
+    Today's date with date pipe and parameters: {{todayDate | date:'short'}}
+</p>
+
+<p>
+    Today's date with date pipe and custom parameters: {{todayDate | date:'mm@-/yyyy'}}
+</p>
+
+<!-- DecimalPipe -->
+
+<p>
+    amount: {{amount}}
+</p>
+
+<p>
+    amount with number pipe: {{amount | number}}
+</p>
+
+<!-- number : minimum_digits_before_decimal . minimum_digits_after_decimal - maximum_digits_after_decimal-->
+
+<p>
+    amount with number pipe and parameter: {{amount | number: '10.1-2'}}
+</p>
+
+<!-- currency pipe -->
+
+<p>
+    amount with currency pipe: {{amount | currency}}
+</p>
+
+<!-- currency: code : display (symbol, symbol-narrow, code): digits_information -->
+
+<p>
+    amount with currency pipe with parameters: {{amount | currency: 'CAD': 'symbol-narrow':'5.2-3'}}
+</p>
+
+<!-- custom -->
+
+<input type="text" [(ngModel)]="option">
+
+<p>
+    My string with custom pipe {{myString | custom : option}}
+</p>

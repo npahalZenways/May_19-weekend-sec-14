@@ -12,9 +12,36 @@
       <div class="form-group">
         <input type="text" class="form-control" ngModel placeholder="email" #email="ngModel" name="email">
       </div>
+
+      <div class="form-group" (click)="print(male)">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="male" id="male" #male="ngModel" ngModel>
+      </div>
       
       <div class="form-group">
-        <button class="btn btn-success" (click)="myForm.form.control.markAsTouched()">Submit</button>
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female" #female="ngModel" ngModel>
+      </div>
+
+      <div class="form-group" (click)="print(check)">
+        <input type="checkbox" name="checkbox" ngModel #check="ngModel">  
+      </div>
+
+      <pre>{{check.value |json}}</pre>
+
+      <div class="form-group">
+        <select name="dropdown" [(ngModel)]="test" pattern="[1-9]" #dropdown="ngModel" required class="form-control">
+          <option value="0" disabled>Select</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-success" [disabled]="myForm.invalid">Submit</button>
+
+        <button type="button" (click)="myForm.form.markAsTouched()">Set Form as touched</button>
+        <button type="button" (click)="setTouched()">Set everything as touched</button>
       </div>
     </form>
   </div>
