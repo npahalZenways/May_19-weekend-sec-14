@@ -21,6 +21,16 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
 import { CustomPipe } from './pipes/custom.pipe';
 import { PipeComponent } from './pipes/pipe/pipe.component';
 
+// import { RouterModule, Route } from "@angular/router";
+
+// const rootRoutes: Route[] = [{
+  
+// }]
+
+import { AppRoutingModule } from "./app-routing.module";
+import { ErrorComponent } from './error/error.component';
+import { FormsComponent } from './forms/forms.component';
+import { AuthGuard } from './auth-gaurd';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,18 +49,23 @@ import { PipeComponent } from './pipes/pipe/pipe.component';
     TemplateDrivenFormsComponent,
     ReactiveFormsComponent,
     CustomPipe,
-    PipeComponent
+    PipeComponent,
+    ErrorComponent,
+    FormsComponent,
     // remaining
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
+    // RouterModule.forRoot(rootRoutes)
     // modules
   ],
   providers: [
     // services
     // MyService
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

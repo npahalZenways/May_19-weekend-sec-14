@@ -1,5 +1,12 @@
 import { Component } from "@angular/core";
 import { MyService } from "./services/my-first-service";
+import { Router } from "@angular/router";
+
+interface employee{
+  employeeId :string;
+  employeeName: string;
+  attendance: boolean
+}
 
 @Component({
   selector: 'app-root',
@@ -10,6 +17,14 @@ import { MyService } from "./services/my-first-service";
 export class AppComponent {
   title = 'app';
   selectedGame;
+
+  employee1: employee = {
+    employeeId :'jhgfd',
+    employeeName: 'jhgfd',
+    attendance: true
+  }
+
+  constructor(private r: Router){}
 
   games = [{
     'Game': 'Cricket',
@@ -65,4 +80,9 @@ export class AppComponent {
       }
     ]
   }]
+
+  toForms(){
+    this.r.navigate(['forms']);
+  }
+
 }

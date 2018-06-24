@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pipe',
@@ -39,9 +40,10 @@ export class PipeComponent implements OnInit {
     phone: 987
   }]  
 
-  constructor() { }
+  constructor(private ar: ActivatedRoute) { }
 
   ngOnInit() {
+    console.log(this.ar)
   }
 
 }
