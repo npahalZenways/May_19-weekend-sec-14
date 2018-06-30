@@ -31,6 +31,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { ErrorComponent } from './error/error.component';
 import { FormsComponent } from './forms/forms.component';
 import { AuthGuard } from './auth-gaurd';
+import { HttpComponent } from './http/http.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +53,7 @@ import { AuthGuard } from './auth-gaurd';
     PipeComponent,
     ErrorComponent,
     FormsComponent,
+    HttpComponent,
     // remaining
   ],
   imports: [

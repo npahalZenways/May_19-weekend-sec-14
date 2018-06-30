@@ -38,6 +38,11 @@
 <!-- <button (click)="toForms()">Forms</button> -->
 
 <button routerLink="lazy">Admin</button>
+<button routerLink="async">HTTP</button>
+
+<button (click)="asyncserv.obj.next(123)">Next</button>
+
+<button (click)="asyncserv.myBehaviouSubject.next(123)">Next BehaviouSubject</button>
 
 <div class="border p-4">
     <router-outlet></router-outlet> 

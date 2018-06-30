@@ -6,6 +6,7 @@ import { ErrorComponent } from './error/error.component';
 import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
 import { FormsComponent } from './forms/forms.component';
 import { AuthGuard } from './auth-gaurd';
+import { HttpComponent } from './http/http.component';
 
 @NgModule({
   imports: [ 
@@ -39,6 +40,9 @@ import { AuthGuard } from './auth-gaurd';
     },{
       path:'lazy',
       loadChildren: './lazy-loading-module/lazy#LazyModule'
+    },{
+      path:'async',
+      component: HttpComponent
     },{
       path: '**',
       component: ErrorComponent

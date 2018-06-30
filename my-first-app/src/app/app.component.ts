@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { MyService } from "./services/my-first-service";
 import { Router } from "@angular/router";
+import { AsyncService } from "./async.service";
 
 interface employee{
   employeeId :string;
@@ -24,7 +25,15 @@ export class AppComponent {
     attendance: true
   }
 
-  constructor(private r: Router){}
+  constructor(private r: Router, private asyncserv: AsyncService){
+    asyncserv.myObservable.subscribe(res => {
+      console.log(res);
+    })
+
+    asyncserv.myBehaviouSubject.subscribe(res => {
+      console.log(res);
+    })
+  }
 
   games = [{
     'Game': 'Cricket',

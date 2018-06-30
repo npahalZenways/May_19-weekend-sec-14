@@ -1,0 +1,7 @@
+<div>
+  <input type="text" #text>
+</div>
+
+<button (click)="asyncserv.signal.next(text.value)">Next</button>
+
+<app-http></app-http>
